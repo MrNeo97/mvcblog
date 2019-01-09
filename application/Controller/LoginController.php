@@ -19,14 +19,15 @@ class LoginController extends Controller
     public function __construct()
     {
         parent::__construct();
-        $this->titulo = 'Productos';
+        $this->titulo = 'Login';
     }
 
     public function index()
     {
         if (! $_POST) {
 
-            echo $this->view->render('login/formulariologin');
+            echo $this->view->render('login/formulariologin',
+                ['titulo' => $this->titulo]);
 
         } else {
 
@@ -47,13 +48,17 @@ class LoginController extends Controller
                  if(Session::get('errorUser')) {
 
                     $error = Session::get('errorUser');
-                    echo $this->view->render('login/formulariologin', ['errorEmail' => $error]);
+                    echo $this->view->render('login/formulariologin',
+                            ['errorEmail' => $error,
+                            'titulo' => $this->titulo]);
                     Session::destroy();
 
                 } else if(Session::get('errorPass')) {
 
                     $error = Session::get('errorPass');
-                    echo $this->view->render('login/formulariologin', ['errorPass' => $error]);
+                    echo $this->view->render('login/formulariologin',
+                            ['errorPass' => $error,
+                            'titulo' => $this->titulo]);
                     Session::destroy();
                 } else {
                      header('Location: /login');
