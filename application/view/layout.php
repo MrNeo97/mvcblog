@@ -8,6 +8,7 @@
     <link href="<?php echo URL; ?>css/bootstrap.css" rel="stylesheet">
     <link href="<?php echo URL; ?>css/style.css" rel="stylesheet">
     <link href="<?php echo URL; ?>font/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
 
 </head>
@@ -15,13 +16,7 @@
 <!--<div class="logo"></div>-->
 
 <!-- navigation -->
-<?php if(\Mini\Core\Session::userIsLoggedIn() && \Mini\Core\Session::jefeIsLoggedIn()) : $this->insert('partials/menu') ?>
-
-<?php elseif(\Mini\Core\Session::userIsLoggedIn()) : $this->insert('partials/menuempleado') ?>
-
-<?php else : $this->insert('partials/menulogin') ?>
-
-<?php endif ?>
+<?php $this->insert('partials/menulogin') ?>
 
 <?= $this->section('content') ?>
 

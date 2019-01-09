@@ -7,24 +7,12 @@
 
                 <div class="form-group">
 
-                    <label for="busqueda"><h2>Método de inicio:</h2></label>
-
-                    <select class="form-control" id="seleccion" name="parametro">
-
-                        <option value="mail">Email</option>
-                        <option value="nickname">Nickname</option>
-
-                    </select>
-
-                </div>
-
-                <div class="form-group">
-
                     <h1>Login</h1>
                     <label for="email"></label>
-                    <input type="text" class="form-control" name="user" placeholder="Introduce tu usuario">
-                    <p class="text-danger"><?= isset($errorUser) ? $errorUser : '' ?></p>
+                    <input type="text" class="form-control" name="email" placeholder="Introduce tu email">
+                    <p class="text-danger"><?= isset($errorEmail) ? $errorEmail : '' ?></p>
                 </div>
+
                 <div class="form-group">
 
                     <label for="clave"></label>

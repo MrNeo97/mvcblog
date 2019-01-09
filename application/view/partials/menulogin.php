@@ -13,8 +13,8 @@
             <li class="nav-item <?php if($url == '/login') : echo 'active'?><?php endif ?>">
                 <a class="nav-link" href="<?php echo URL; ?>login">Login<span class="sr-only"></span></a>
             </li>
-            <li class="nav-item <?php if($url == '/productos') : echo 'active'?><?php endif ?>">
-                <a class="nav-link" href="<?php echo URL; ?>productos">Productos</a>
+            <li class="nav-item <?php if($url == '/posts') : echo 'active'?><?php endif ?>">
+                <a class="nav-link" href="<?php echo URL; ?>posts">Posts</a>
             </li>
         </ul>
     </div>
