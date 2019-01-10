@@ -19,7 +19,7 @@
                             <p><?= $post->resumen ?></p>
                             <p><?= $post->fecha ?></p>
                             <p><?= $categorias[$key][0]->nombre ?></p>
-                            <p><a href="/posts/<?= $post->id ?>">[Leer más]</a></p>
+                            <p><a href="<?php echo URL ?>home/ver/<?= $post->id ?>">[Leer más]</a></p>
                         </div>
                     </div>
 

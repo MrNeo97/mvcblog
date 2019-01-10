@@ -15,7 +15,7 @@ class TemplatesFactory
 
             //Aqui le digo la ruta desde donde van a comenzar todas las vistas
             TemplatesFactory::$templates = new Engine(APP . 'view');
-            TemplatesFactory::$templates->addData(['titulo' => 'Catálogo']);
+            TemplatesFactory::$templates->addData(['titulo' => 'Blog']);
 
         }
 

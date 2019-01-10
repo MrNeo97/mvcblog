@@ -10,10 +10,15 @@
 
             <?php $url= $_SERVER["REQUEST_URI"] ?>
 
-            <li class="nav-item <?php if(URL == '/login') : echo 'active'?><?php endif ?>">
-                <a class="nav-link" href="<?php echo URL; ?>login">Login<span class="sr-only"></span></a>
+            <li class="nav-item <?php if(URL == '/dash') : echo 'active'?><?php endif ?>">
+                <a class="nav-link" href="<?php echo URL ?>dash">Dashboard</a>
             </li>
-
+            <li class="nav-item <?php if(URL == '/post/crear') : echo 'active'?><?php endif ?>">
+                <a class="nav-link" href="<?php echo URL ?>post/crear">Crear Post</a>
+            </li>
+            <li class="nav-item <?php if(URL == '/posts') : echo 'active'?><?php endif ?>">
+                <a class="nav-link" href="<?php echo URL ?>post">Editar Posts</a>
+            </li>
         </ul>
     </div>
 </nav>

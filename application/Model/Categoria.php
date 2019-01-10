@@ -13,7 +13,7 @@ use Mini\Core\Database;
 
 class Categoria
 {
-    public static function buscar($param, $value)
+    public static function buscar($value, $param = 'id')
     {
 
         $conn = Database::getInstance()->getDatabase();
